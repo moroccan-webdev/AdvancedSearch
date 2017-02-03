@@ -82,13 +82,20 @@
                     Laravel
                 </div>
 
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
+                <table width="900px" align="center" corder="1" cellpadding="10">
+                  <tr>
+                    <td>title</td>
+                  </tr>
+                  @foreach($page as $p)
+                    <tr>
+                      <td>{{$p->name}}</td>
+                    </tr>
+                  @endforeach
+                </table>
+                {{$page->setPath('/search/'.$text)->render()}}
+                <a href="/search/vuejs">vuejs</a>
+                <a href="/search/laravel">laravel</a>
+                <a href="/search/php">php</a>
             </div>
         </div>
     </body>
